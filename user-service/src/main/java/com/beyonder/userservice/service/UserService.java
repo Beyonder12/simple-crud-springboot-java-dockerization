@@ -1,6 +1,7 @@
 package com.beyonder.userservice.service;
 
-import com.hkdemircan.demo.model.User;
+
+import com.beyonder.userservice.model.User;
 
 import java.util.List;
 

@@ -1,12 +1,12 @@
 package com.beyonder.userservice.controller;
 
-import com.hkdemircan.demo.model.User;
-import com.hkdemircan.demo.service.UserService;
+import com.beyonder.userservice.model.User;
+import com.beyonder.userservice.service.UserService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -22,11 +22,11 @@ public class UserController {
     }
 
     @PostMapping("/saveUser")
-    public User createUser(@Valid @RequestBody User user){
+    public User createUser(@RequestBody User user){
         return userService.save(user);
     }
     @PutMapping("/users/{id}")
-    public ResponseEntity<User> updateUser(@PathVariable(value = "id") Long id, @Valid @RequestBody User userDetails) {
+    public ResponseEntity<User> updateUser(@PathVariable(value = "id") Long id, @RequestBody User userDetails) {
         User user = userService.findFirstById(id);
         if(null == user) {
             return ResponseEntity.notFound().build();

@@ -1,7 +1,7 @@
 package com.beyonder.userservice.service;
 
-import com.hkdemircan.demo.model.User;
-import com.hkdemircan.demo.repository.UserRepository;
+import com.beyonder.userservice.model.User;
+import com.beyonder.userservice.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
