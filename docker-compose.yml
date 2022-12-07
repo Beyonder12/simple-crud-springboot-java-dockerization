@@ -12,8 +12,8 @@ services:
       - user-db
     environment:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://user-db:5432/user_db
-      - SPRING_DATASOURCE_USERNAME=user-service
-      - SPRING_DATASOURCE_PASSWORD=user-service
+      - SPRING_DATASOURCE_USERNAME=user_db
+      - SPRING_DATASOURCE_PASSWORD=user_db
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
       - SERVER_PORT=8087
     expose:
@@ -29,5 +29,7 @@ services:
       - POSTGRES_DB=user_db
     volumes:
       - user_db:/var/lib/postgresql/data
+    ports:
+      - "5438:5432"
 volumes:
   user_db:
