@@ -2,10 +2,11 @@ version: '3'
 
 services:
   user-service:
+    platform: 'linux/amd64'
     image: 'user-service:latest'
     container_name: user-service
     build:
-      context: .
+      context: user-service
       dockerfile: Dockerfile
     depends_on:
       - user-db
