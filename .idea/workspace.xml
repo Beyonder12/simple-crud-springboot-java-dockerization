@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="947b6cfa-e16d-495e-a53a-29149ca4a4f6" name="Changes" comment="Beyonder : docker compose part 2">
+    <list default="true" id="947b6cfa-e16d-495e-a53a-29149ca4a4f6" name="Changes" comment="Beyonder : docker compose part 3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/beyonder/userservice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/beyonder/userservice/controller/UserController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +87,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670315087218</updated>
-      <workItem from="1670315089714" duration="13597000" />
+      <workItem from="1670315089714" duration="14709000" />
     </task>
     <task id="LOCAL-00001" summary="Beyonder : crud">
       <created>1670315805931</created>
@@ -116,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670408517540</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Beyonder : docker compose part 3">
+      <created>1670484765222</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1670484765222</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,6 +147,7 @@
     <MESSAGE value="Beyonder : crud fixation and docker" />
     <MESSAGE value="Beyonder : docker compose" />
     <MESSAGE value="Beyonder : docker compose part 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Beyonder : docker compose part 2" />
+    <MESSAGE value="Beyonder : docker compose part 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Beyonder : docker compose part 3" />
   </component>
 </project>
