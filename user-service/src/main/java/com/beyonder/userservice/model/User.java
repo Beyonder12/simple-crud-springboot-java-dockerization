@@ -1,9 +1,12 @@
 package com.beyonder.userservice.model;
 
+import lombok.Data;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "user111")
+@Data
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -11,27 +14,4 @@ public class User {
     private String name;
     private String address;
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
 }

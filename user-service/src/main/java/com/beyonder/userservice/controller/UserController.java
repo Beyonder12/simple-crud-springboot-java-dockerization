@@ -3,6 +3,7 @@ package com.beyonder.userservice.controller;
 import com.beyonder.userservice.model.User;
 import com.beyonder.userservice.service.UserService;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,10 +12,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/rest")
+@RequiredArgsConstructor
 public class UserController {
 
-    @Autowired
-    private UserService userService;
+    private final UserService userService;
 
     @GetMapping("/getUsers")
     public List<User> getAllUsers(){
@@ -47,6 +48,6 @@ public class UserController {
 
     @GetMapping("/testMessage")
     public String getTestMessage(){
-        return "Hello World... I'm ready..";
+        return "Hello World... I'm ready for docker part2";
     }
 }
