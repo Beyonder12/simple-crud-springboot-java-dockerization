@@ -28,9 +28,8 @@ jobs:
           echo $DOCKER_CERT > cert.pem
           echo $DOCKER_KEY > key.pem
           
-          cat ca.pem
-          cat cert.pem
-          cat key.pem
+          cp ca.pem /usr/local/share/ca-certificates/docker-host.pem
+          update-ca-certificates
           
           docker --tlsverify \
             --tlscacert=ca.pem \
