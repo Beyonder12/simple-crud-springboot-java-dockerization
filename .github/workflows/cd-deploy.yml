@@ -27,7 +27,7 @@ jobs:
           echo $DOCKER_CA > ca.pem
           echo $DOCKER_CERT > cert.pem
           echo $DOCKER_KEY > key.pem
-          chmod -v 0400 ca-key.pem key.pem server-key.pem
+          chmod -v 0400 ca.pem key.pem cert.pem
           
           sudo cp ca.pem /usr/local/share/ca-certificates/docker-host.pem
           sudo update-ca-certificates
