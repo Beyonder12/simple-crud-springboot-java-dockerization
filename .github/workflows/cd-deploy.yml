@@ -9,10 +9,21 @@ on:
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
 
-      - name: CD action
+      - name: configure-docker-cli
+        env:
+          DOCKER_CA: ${{ secrets.DOCKER_CA }}
+          DOCKER_CERT: ${{ secrets.DOCKER_CERT }}
+          DOCKER_KEY: ${{ secrets.DOCKER_KEY }}
+          DOCKER_HOST: "tcp://ec2-35-171-168-3.compute-1.amazonaws.com:2376"
+          DOCKER_TLS_VERIFY: "1"
         run: |
-          echo "Hello"
+          mkdir -pv ~/.docker
+          
+          echo $DOCKER_CA > ~/.docker/ca.pem
+          echo $DOCKER_CERT > ~/.docker/cert.pem
+          echo $DOCKER_KEY > ~/.docker/key.pem
+          
+          docker version
