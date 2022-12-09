@@ -28,5 +28,11 @@ jobs:
           echo $DOCKER_CERT | base64 --decode > ~/.docker/cert.pem
           echo $DOCKER_KEY | base64 --decode > ~/.docker/key.pem
 
-          
           docker version
+          
+      - name: build-and-deploy
+        env:
+          DOCKER_HOST: "tcp://ec2-35-171-168-3.compute-1.amazonaws.com:2376"
+          DOCKER_TLS_VERIFY: "1"
+        run: |
+          make
