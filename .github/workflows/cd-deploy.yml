@@ -24,8 +24,13 @@ jobs:
         run: |
           mkdir -pv ~/.docker
           
-          echo $DOCKER_CA > ~/.docker/ca.pem
-          echo $DOCKER_CERT > ~/.docker/cert.pem
-          echo $DOCKER_KEY > ~/.docker/key.pem
+          echo $DOCKER_CA > ca.pem
+          echo $DOCKER_CERT > cert.pem
+          echo $DOCKER_KEY > key.pem
           
-          docker version
+          pwd
+          docker --tlsverify \
+            --tlscacert=ca.pem \
+            --tlscert=cert.pem \
+            --tlskey=key.pem \
+            -H=ec2-35-171-168-3.compute-1.amazonaws.com:2376 version
