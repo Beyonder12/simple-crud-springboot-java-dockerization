@@ -48,6 +48,6 @@ public class UserController {
 
     @GetMapping("/testMessage")
     public String getTestMessage(){
-        return "Hello World... I'm ready for dockerization";
+        return "Hello World... I'm ready for ";
     }
 }
