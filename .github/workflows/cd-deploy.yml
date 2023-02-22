@@ -13,7 +13,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-
+      
+      - name: compile
+        run: |
+          cd user-service
+          mvn compile
+      - name: test
+        run: |
+          cd user-service
+          mvn test
+          
       - name: configure-docker-cli
         env:
           DOCKER_CA: ${{ secrets.DOCKER_CA }}
